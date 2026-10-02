@@ -1,0 +1,13 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f4f6f8;
+  color: #222;
+  line-height: 1.5;
+}
