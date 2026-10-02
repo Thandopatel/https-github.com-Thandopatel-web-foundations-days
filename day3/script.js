@@ -130,7 +130,19 @@ console.log(countByCategory());
 // getSummary
 console.log(getSummary());
 // Expected: "5 notes: 2 personal, 2 study, 1 work."
+// countByCategory
+console.log(countByCategory());
+// Expected: { personal: 2, study: 2, work: 1 }
 
+// Edge case: empty array
+const saved2 = notes;
+notes = [];
+console.log(countByCategory());
+// Expected: {}
+notes = saved2;
+
+// getSummary
+console.log(getSummary());
 const backup = notes;
 notes = [{ id: 99, text: "Only one", category: "personal" }];
 console.log(getSummary());
