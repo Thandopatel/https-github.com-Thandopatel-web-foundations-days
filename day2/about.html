@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>QuickNotes - About</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
@@ -14,77 +15,33 @@
       <a href="about.html">About</a>
     </nav>
   </header>
+
   <main>
-    <h2>About QuickNotes</h2>
-    <p>QuickNotes is a lightweight, browser-based tool for capturing thoughts, lists, and ideas instantly without distractions. It runs entirely offline and keeps your notes private on your own device.</p>
     <section>
-      <h3>How to use QuickNotes</h3>
-      <ol>
-        <li>Open the app and click the New note button to start a blank note.</li>
-        <li>Type your content - use plain text or simple markdown shortcuts.</li>
-        <li>Press Ctrl+S to save; notes are stored locally in your browser.</li>
-        <li>Use the search bar to filter notes by title or content instantly.</li>
-      </ol>
+      <h2>About QuickNotes</h2>
+      <p>
+        QuickNotes is a lightweight note-taking app designed for speed and
+        simplicity. It runs entirely in your browser, stores notes locally,
+        and stays out of your way while you work.
+      </p>
+      <p>
+        Built as part of a web development foundation course, it demonstrates
+        HTML structure, CSS styling, Flexbox layout, CSS Grid, and responsive
+        design with media queries.
+      </p>
     </section>
+
     <section>
-      <h3>Features</h3>
-      <ul>
-        <li>Instant offline access - no internet required.</li>
-        <li>Local storage: your notes never leave your computer.</li>
-        <li>Full-text search across all notes.</li>
-        <li>Dark mode and light mode toggle.</li>
-        <li>Export notes as plain text or JSON.</li>
-        <li>Keyboard-first navigation for power users.</li>
+      <h2>Why QuickNotes?</h2>
+      <ul class="features">
+        <li>No sign-up required</li>
+        <li>Works offline</li>
+        <li>Keyboard-first design</li>
+        <li>Clean, focused interface</li>
       </ul>
     </section>
-    <section>
-      <h3>Keyboard shortcuts</h3>
-      <table>
-        <thead>
-          <tr>
-            <th>Shortcut</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Ctrl + N</td>
-            <td>Create a new note</td>
-          </tr>
-          <tr>
-            <td>Ctrl + S</td>
-            <td>Save current note</td>
-          </tr>
-          <tr>
-            <td>Ctrl + F</td>
-            <td>Search notes</td>
-          </tr>
-          <tr>
-            <td>Ctrl + D</td>
-            <td>Duplicate selected note</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-    <section>
-      <h3>Send feedback</h3>
-      <form action="#" method="post">
-        <p>
-          <label for="name">Name</label><br>
-          <input type="text" id="name" name="name" required>
-        </p>
-        <p>
-          <label for="email">Email</label><br>
-          <input type="email" id="email" name="email" required>
-        </p>
-        <p>
-          <label for="message">Message</label><br>
-          <textarea id="message" name="message" rows="4" required></textarea>
-        </p>
-        <button type="submit">Send feedback</button>
-      </form>
-    </section>
   </main>
+
   <footer>
     <p>&copy; 2025 QuickNotes. All rights reserved.</p>
   </footer>
