@@ -9,18 +9,51 @@
 <body>
   <header>
     <h1>SnapShare</h1>
+    <div id="user-bar">
+      <span id="welcome"></span>
+      <button id="logout-btn" hidden>Log out</button>
+    </div>
   </header>
 
   <main id="app">
-    <section id="upload">
-      <h2>Upload a photo</h2>
-      <input type="file" id="photo-input" accept="image/*" />
-      <button id="upload-btn">Upload</button>
+    <!-- AUTH VIEW -->
+    <section id="auth-view">
+      <h2>Welcome</h2>
+
+      <div id="auth-tabs">
+        <button id="tab-login" class="tab active">Log in</button>
+        <button id="tab-signup" class="tab">Sign up</button>
+      </div>
+
+      <form id="auth-form">
+        <label>
+          Username
+          <input type="text" id="auth-username" autocomplete="username" required />
+        </label>
+        <label>
+          Password
+          <input type="password" id="auth-password" autocomplete="current-password" required />
+        </label>
+        <button type="submit" id="auth-submit">Log in</button>
+        <p id="auth-error" class="error"></p>
+      </form>
     </section>
 
-    <section id="feed">
-      <h2>Your feed</h2>
-      <div id="feed-list"></div>
+    <!-- APP VIEW (only shown when logged in) -->
+    <section id="app-view" hidden>
+      <section id="upload">
+        <h2>Upload a photo</h2>
+        <input type="file" id="photo-input" accept="image/*" />
+        <input type="text" id="photo-caption" placeholder="Caption (optional)" />
+        <button id="upload-btn">Upload</button>
+        <p id="upload-status"></p>
+      </section>
+
+      <section id="feed">
+        <h2>Your feed</h2>
+        <div id="feed-list"></div>
+        <p id="feed-empty" hidden>No photos yet. Upload one to get started.</p>
+      </section>
     </section>
   </main>
 

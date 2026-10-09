@@ -8,10 +8,18 @@ body {
 }
 
 header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 1rem 2rem;
   border-bottom: 1px solid #ddd;
   background: #fff;
 }
+
+header h1 { margin: 0; font-size: 1.25rem; }
+
+#user-bar { display: flex; align-items: center; gap: 0.75rem; }
+#welcome { font-size: 0.9rem; color: #555; }
 
 main {
   max-width: 720px;
@@ -27,6 +35,24 @@ section {
   margin-bottom: 1.5rem;
 }
 
+section h2 { margin-top: 0; }
+
+label {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 0.25rem;
+  font-size: 1rem;
+}
+
 button {
   padding: 0.5rem 1rem;
   border: none;
@@ -34,12 +60,52 @@ button {
   background: #2563eb;
   color: #fff;
   cursor: pointer;
+  font-size: 0.95rem;
 }
 
 button:hover { background: #1d4ed8; }
+button:disabled { background: #93c5fd; cursor: not-allowed; }
 
-#feed-list img {
-  max-width: 100%;
-  border-radius: 6px;
-  margin-top: 1rem;
+#auth-tabs { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
+.tab { background: #e5e7eb; color: #111; }
+.tab.active { background: #2563eb; color: #fff; }
+
+.error { color: #dc2626; font-size: 0.85rem; min-height: 1.2em; }
+
+#upload { display: flex; flex-direction: column; gap: 0.75rem; }
+#upload input[type="file"] { font-size: 0.95rem; }
+#upload-status { font-size: 0.85rem; color: #555; min-height: 1.2em; }
+
+#feed-list { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+
+.photo-card {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
 }
+
+.photo-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.photo-card .meta {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.85rem;
+  color: #555;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.photo-card .caption { flex: 1; }
+.photo-card .delete {
+  background: transparent;
+  color: #dc2626;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+}
+.photo-card .delete:hover { background: #fee2e2; }
