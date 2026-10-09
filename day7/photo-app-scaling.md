@@ -79,8 +79,9 @@ Instead, photos go to object storage (e.g. Amazon S3, Google Cloud Storage, Clou
 
 
 ARCHITECTURE DIAGRAM (TEXT)
+## ARCHITECTURE DIAGRAM (TEXT)
 
-
+```
                               ┌─────────┐
                    ┌─────────>│   DNS   │ (snapshare.com → IP addresses)
                    │          └─────────┘
@@ -116,6 +117,10 @@ ARCHITECTURE DIAGRAM (TEXT)
    │  Cache  │
    │ (Redis) │
    └─────────┘
+```
+
+## COMPONENT EXPLANATIONS (ONE SENTENCE EACH)
+
 
 
 
