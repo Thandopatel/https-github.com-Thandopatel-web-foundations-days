@@ -55,7 +55,7 @@ Because this happens inside a transaction, the database locks the row. If two us
 
 ## 6. Architecture
 
-*(Note: Draw a diagram in Draw.io or Canva and paste the image here, or use the text description below)*
+![TicketHub Architecture Diagram](./architecture.png)
 
 *   **CDN:** Serves static assets (images, CSS, JS) so the app servers don't waste CPU on them.
 *   **Load Balancer:** Distributes the 200,000 users across multiple app servers (Horizontal Scaling).
